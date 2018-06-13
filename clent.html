@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+<body>
+<button id='aa'>test</button>
+</body>
+<script src="http://code.jquery.com/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="http://www.gongjuji.net/Content/files/jquery.md5.js"></script>
+<script type="text/javascript">
+	//alert(123);
+	var miyao = 'helloword';
+	var dataObj = new Object();
+	var mydate = parseInt(new Date().getTime()/1000);
+	
+	dataObj.timeStamp = mydate;
+	dataObj.id   =123;
+	dataObj.name ='hello';
+
+	dataObj.sex  ='boy';
+	//对象按键 排序
+	function objKeySort(obj) {//排序的函数
+    	var newkey = Object.keys(obj).sort();
+     	var newObj = {};//创建一个新的对象，用于存放排好序的键值对
+	    for (var i = 0; i < newkey.length; i++) {//遍历newkey数组
+	        newObj[newkey[i]] = obj[newkey[i]];//向新创建的对象中按照排好的顺序依次增加键值对
+	    }
+    	return newObj;//返回排好序的新对象
+	}
+	signObj = objKeySort(dataObj);
+	//生成签名
+	var sign  ='';
+	var str ='';
+	for(var key in signObj){  
+	    str += key+'='+signObj[key]+'&';  
+    } 
+    str+='key='+miyao;
+	dataObj.sign = $.md5(str);
+
+	$('#aa').click(function(){
+ 		  $.post("server.php", dataObj, function(data){
+ 		  }, 'json');
+	}) 
+</script>
+</html>
