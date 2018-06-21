@@ -3,7 +3,7 @@
  * 接口安全验证
  * @Author   SongRan
  */
-namespace safe;
+namespace Safe;
 class Verification{
 
 	private  $signKey   ;  //秘钥

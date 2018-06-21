@@ -1,0 +1,17 @@
+{
+    "name": "songran/api-safe",
+    "description": "api safe",
+    "authors": [
+        {
+            "name": "songran",
+            "email": "821687825@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Safe\\": "src/"
+        }
+    }
+}

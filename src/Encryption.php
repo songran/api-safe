@@ -2,7 +2,7 @@
 /**
  * api加密解密类
  */
-namespace safe;
+namespace Safe;
 class Encryption{
 
     
