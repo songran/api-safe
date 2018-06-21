@@ -6,9 +6,20 @@
 namespace libs;
 class Safe{
 
-	private  $signKey   = 'helloword';  //秘钥
-	private  $timeSpace = '60';          //时间限制 这个时间内有效
+	private  $signKey   ;  //秘钥
+	private  $timeSpace ;  //时间限制 这个时间内有效
 
+  /**
+   * 初始化 传参
+   * @Author   SongRan
+   * @DateTime 2018-06-21
+   * @param    string     $signKey   [description]
+   * @param    integer    $timeSpace [description]
+   */
+  public function __construct($signKey='helloword',$timeSpace=60) {
+      $this->signKey   = $signKey;
+      $this->timeSpace = $timeStamp;
+  }
 	/**
 	 * 验证传入的数据  必须参数 timeStamp sign
 	 * @Author   SongRan
