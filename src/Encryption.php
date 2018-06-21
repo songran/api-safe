@@ -14,26 +14,7 @@ class Encryption{
         
         $this->pubKey  = openssl_pkey_get_public(file_get_contents(__DIR__.'/../conf/openssl/rsa_public_key.pem'));
     }
-	
-    /**
-     * 业务验签 对数组的参数进行签名
-     * @param string $method（采用md5签名）
-     * @param array $arrInput
-     * @param string $signKey
-     * @return string
-    */
-    public  function signArray( $arrInput, $signKey)
-    {
-        $arrInput = ksort ($arrInput);
-        $signStr = '';
-        foreach ($arrInput as $key => $val) {
-            $signStr .= '&'.$key.'='.$val;
-        }
-        $signStr = substr($signStr, 1);
-        $signStr = $signStr.'&key='.$signKey;
-        $sign = md5($signStr);
-        return $ret;
-    }
+     
 
    
     //公钥加密
