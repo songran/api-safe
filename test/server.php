@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';  
 use Safe\Verification;  
 
-$mod    = new Verification('helloword', 60);
+$mod    = new Verification('helloword', 60); //秘钥和过期时间
 
 // $time = time();
 // $time  = 1528798567;
