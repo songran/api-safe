@@ -18,7 +18,7 @@ class Verification{
    */
   public function __construct($signKey='helloword',$timeSpace=60) {
       $this->signKey   = $signKey;
-      $this->timeSpace = $timeStamp;
+      $this->timeSpace = $timeSpace;
   }
 	/**
 	 * 验证传入的数据  必须参数 timeStamp sign

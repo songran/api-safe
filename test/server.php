@@ -1,11 +1,9 @@
 <?php
-function myLoader($class){
-    $class = str_replace('\\','/',$class);
-    require __DIR__ . '/../' . $class . '.php';
-}
-spl_autoload_register('myLoader');
+ //放到最外层
+require_once __DIR__ . '/../vendor/autoload.php';  
+use Safe\Verification;  
 
-$mod    = new \apisafe\Safe();
+$mod    = new Verification('helloword', 60);
 
 // $time = time();
 // $time  = 1528798567;
