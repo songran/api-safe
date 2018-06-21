@@ -1,11 +1,11 @@
 <?php
 function myLoader($class){
     $class = str_replace('\\','/',$class);
-    require __DIR__ . '/' . $class . '.php';
+    require __DIR__ . '/../' . $class . '.php';
 }
 spl_autoload_register('myLoader');
 
-$mod    = new \libs\Safe();
+$mod    = new \apisafe\Safe();
 
 // $time = time();
 // $time  = 1528798567;

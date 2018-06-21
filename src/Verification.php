@@ -3,8 +3,8 @@
  * 接口安全验证
  * @Author   SongRan
  */
-namespace libs;
-class Safe{
+namespace safe;
+class Verification{
 
 	private  $signKey   ;  //秘钥
 	private  $timeSpace ;  //时间限制 这个时间内有效
