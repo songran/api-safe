@@ -1,13 +1,19 @@
+引入
+composer require songran/api-safe dev-master
+
+
+
+# api_verifycation
+
+描述：api接口安全 验证接口
+	1.实现业务验签 签名秘钥
+	2.实现防刷    时间戳
+
+
+
+
 # api_encryption
-描述：api接口加密
-1.实现业务验签
-2.实现防刷
-3.密文传送
-
-
-
- 
-二、RSA密钥生成命令
+RSA密钥生成命令 （后期使用）
 
 1、生成RSA私钥
 openssl>genrsa -out rsa_private_key.pem 1024
