@@ -99,8 +99,8 @@ class Verification{
       		0 =>'成功',
       		1 =>'sign不存在',
       		2 =>'时间已经过期',
-      		3 =>'验证失败',
-          4 =>'时间戳不存在'
+      		3 =>'sign验证失败',
+          4 =>'时间戳timeStamp不存在'
       	);
       	return ['code'=>$code,'msg'=>$arr[$code]];
     }
